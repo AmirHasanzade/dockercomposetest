@@ -10,7 +10,8 @@ WORKDIR /app
 # WORKDIR /src # /app/src relative to "app"
 # WORKDIR src # /src from the root
 # for docker-compose the source must be relative to the project root
-COPY ./webserver .
+# COPY ./webserver .
+COPY . .
 RUN npm install
 # CMD ["node", "./src/index.js"]
 CMD ["npm", "run", "dev"]
