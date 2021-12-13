@@ -1,4 +1,0 @@
-build:
-  docker:
-    webservice: webservice/Dockerfile
-    webserver: webserver/Dockerfile
