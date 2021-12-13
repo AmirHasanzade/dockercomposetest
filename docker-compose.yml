@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  webserver:
+    build: 
+      context: .
+      dockerfile: webserver/Dockerfile
+    volumes:
+      - ./webserver/src:/app/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - webservice
+  webservice:
+    build: 
+      context: .
+      dockerfile: webservice/Dockerfile
+    volumes:
+      - ./webservice/src:/app/src
+    ports:
+      - "4000:4000"
